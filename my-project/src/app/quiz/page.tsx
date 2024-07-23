@@ -33,8 +33,8 @@ export default function Quiz() {
     setUserInput(e.target.value);
   };
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-4">Quiz Time!</h1>
+    <div className="container mx-auto px-4 py-8 w-[600px] gap-y-4">
+      <h1 className="text-2xl font-bold mb-4 flex justify-center my-3">Quiz Time!</h1>
       {currentQuestion < questions.length ? (
         <div>
           <p className="text-xl font-medium mb-2">
@@ -60,11 +60,11 @@ export default function Quiz() {
           </form>
         </div>
       ) : (
-        <div>
-          <p className="text-xl font-medium mb-2">Quiz Completed!</p>
+        <div className="mx-auto flex flex-col justify-center items-center">
+          <p className="text-xl font-medium mb-2 ">Quiz Completed!</p>
           <p>
-            Your score:
-            {score}
+            Your score:{" "}
+            {score} {" "}
             out of {questions.length}
           </p>
           <button

@@ -10,7 +10,7 @@ export default function Age() {
   const submit = (e: any) => {
     e.preventDefault();
     if (age >= "18") {
-      setMessage("you  are eligible");
+      setMessage("you  are eligible to vote");
     } else {
       setMessage("sorry you are not eligible");
     }
@@ -19,7 +19,7 @@ export default function Age() {
     <main className="flex min-h-screen flex-col items-start justify-between p-24 bg-white">
       <div className="font-bold text-3xl  text-black cursor-pointer">
         <h1>Age section</h1>
-        <form className="bg-gray-400 rounded-md" onSubmit={(e) => submit(e)}>
+        <form className="bg-gray-400 p-5 my-1 rounded-md" onSubmit={(e) => submit(e)}>
           <label>enter your age</label>
           <input type="number" onChange={(e) => setAge(e.target.value)}></input>
 
